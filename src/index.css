@@ -1,0 +1,409 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  *, ::before, ::after {
+    font-family: 'Calibri', 'Carlito', 'Candara', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-weight: 400 !important;
+    font-style: normal;
+  }
+
+  body {
+    font-family: 'Calibri', 'Carlito', 'Candara', 'Segoe UI', sans-serif !important;
+    background-color: #ffffff;
+    color: #0f172a;
+    font-size: 12px;
+    line-height: 1.35;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  /* High-contrast night-shift canvas */
+  html.dark body {
+    background-color: #090d16 !important;
+    color: #f1f5f9 !important;
+  }
+
+  h1, h2, h3, h4, h5, h6, b, strong, th {
+    font-weight: 400 !important;
+  }
+
+  /* Form input fields in standard light theme */
+  input, select, textarea {
+    background-color: #ffffff;
+    color: #0f172a;
+    font-family: 'Calibri', 'Carlito', 'Candara', 'Segoe UI', sans-serif !important;
+    font-weight: 400 !important;
+  }
+
+  /* Form input fields in high-contrast dark theme */
+  html.dark input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), 
+  html.dark select, 
+  html.dark textarea {
+    background-color: #111827 !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+  }
+
+  html.dark input::placeholder,
+  html.dark textarea::placeholder {
+    color: #64748b !important;
+  }
+}
+
+/* ==========================================================================
+   HIGH-CONTRAST NIGHT-SHIFT PALETTES & SURFACE OVERRIDES
+   ========================================================================== */
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark .bg-white {
+  background-color: #111827 !important;
+  color: #f8fafc;
+}
+
+html.dark .bg-slate-50 {
+  background-color: #0b0f19 !important;
+}
+
+html.dark .bg-slate-100 {
+  background-color: #1f293d !important;
+}
+
+html.dark .bg-slate-200 {
+  background-color: #334155 !important;
+}
+
+html.dark .border-slate-100 {
+  border-color: #1e293b !important;
+}
+
+html.dark .border-slate-200 {
+  border-color: #1f293d !important;
+}
+
+html.dark .border-slate-300 {
+  border-color: #334155 !important;
+}
+
+html.dark .divide-slate-100 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #1e293b !important;
+}
+
+html.dark .divide-slate-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #1f293d !important;
+}
+
+html.dark .text-slate-900 {
+  color: #f8fafc !important;
+}
+
+html.dark .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+html.dark .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+html.dark .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+html.dark .text-slate-400 {
+  color: #64748b !important;
+}
+
+/* Specific Corporate Accent Adaptation in Dark Mode */
+html.dark .text-\[\#003049\] {
+  color: #38bdf8 !important;
+}
+
+html.dark .bg-\[\#003049\] {
+  background-color: #0f2744 !important;
+  border-color: #0284c7 !important;
+}
+
+html.dark .bg-\[\#fdf0d5\] {
+  background-color: #2e2616 !important;
+}
+
+html.dark .text-\[\#780000\] {
+  color: #fca5a5 !important;
+}
+
+html.dark .hover\:bg-slate-50:hover {
+  background-color: #1e293b !important;
+}
+
+html.dark .hover\:bg-slate-100:hover {
+  background-color: #334155 !important;
+}
+
+/* Badges in Dark Mode */
+html.dark .bg-blue-50 {
+  background-color: rgba(30, 58, 138, 0.3) !important;
+  color: #93c5fd !important;
+}
+html.dark .bg-emerald-50 {
+  background-color: rgba(6, 78, 59, 0.35) !important;
+  color: #6ee7b7 !important;
+}
+html.dark .bg-indigo-50 {
+  background-color: rgba(49, 46, 129, 0.35) !important;
+  color: #a5b4fc !important;
+}
+html.dark .bg-amber-50, html.dark .bg-amber-50\/70 {
+  background-color: rgba(120, 53, 15, 0.35) !important;
+  color: #fcd34d !important;
+}
+html.dark .bg-rose-50 {
+  background-color: rgba(136, 19, 55, 0.35) !important;
+  color: #fda4af !important;
+}
+
+/* ==========================================================================
+   THEME PALETTES: BLUE NIGHT, OLED BLACK, RED MODE, FOREST MODE, CREAM MODE
+   ========================================================================== */
+/* 1. Blue Night */
+html.theme-blue-night body {
+  background-color: #070f20 !important;
+  color: #f1f5f9 !important;
+}
+html.theme-blue-night .bg-white {
+  background-color: #0d1b38 !important;
+  color: #f8fafc;
+}
+html.theme-blue-night .bg-slate-50 {
+  background-color: #081328 !important;
+}
+html.theme-blue-night .border-slate-200, 
+html.theme-blue-night .border-slate-300 {
+  border-color: #1e3a66 !important;
+}
+
+/* 2. OLED Black */
+html.theme-black body {
+  background-color: #000000 !important;
+  color: #f8fafc !important;
+}
+html.theme-black .bg-white {
+  background-color: #0a0a0a !important;
+  color: #f8fafc;
+}
+html.theme-black .bg-slate-50 {
+  background-color: #050505 !important;
+}
+html.theme-black .border-slate-200, 
+html.theme-black .border-slate-300 {
+  border-color: #262626 !important;
+}
+
+/* 3. Crimson / Red Night */
+html.theme-red body {
+  background-color: #140407 !important;
+  color: #fce7f3 !important;
+}
+html.theme-red .bg-white {
+  background-color: #24070d !important;
+  color: #fce7f3;
+}
+html.theme-red .bg-slate-50 {
+  background-color: #190509 !important;
+}
+html.theme-red .border-slate-200, 
+html.theme-red .border-slate-300 {
+  border-color: #4c111e !important;
+}
+
+/* 4. Forest Night */
+html.theme-forest body {
+  background-color: #04140c !important;
+  color: #ecfdf5 !important;
+}
+html.theme-forest .bg-white {
+  background-color: #082417 !important;
+  color: #ecfdf5;
+}
+html.theme-forest .bg-slate-50 {
+  background-color: #051a10 !important;
+}
+html.theme-forest .border-slate-200, 
+html.theme-forest .border-slate-300 {
+  border-color: #134e32 !important;
+}
+
+/* 5. Executive Cream */
+html.theme-cream body {
+  background-color: #f9f4e8 !important;
+  color: #292524 !important;
+}
+html.theme-cream .bg-white {
+  background-color: #fffdf8 !important;
+  color: #292524;
+}
+html.theme-cream .bg-slate-50 {
+  background-color: #f4eee0 !important;
+}
+html.theme-cream .bg-slate-100 {
+  background-color: #ebe4d3 !important;
+}
+html.theme-cream .border-slate-200, 
+html.theme-cream .border-slate-300 {
+  border-color: #ded5c2 !important;
+}
+
+
+/* Custom scrollbars in Light & Dark */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #669bbc;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #003049;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 2px;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Neon Glow Animations for Buttons */
+@keyframes neon-pulse-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px currentColor);
+  }
+  50% {
+    filter: drop-shadow(0 0 18px currentColor);
+  }
+}
+
+@keyframes neon-sheen-sweep {
+  0% {
+    transform: translateX(-120%) skewX(-20deg);
+  }
+  50%, 100% {
+    transform: translateX(220%) skewX(-20deg);
+  }
+}
+
+.animate-neon-pulse {
+  animation: neon-pulse-glow 2.4s ease-in-out infinite;
+}
+
+.animate-neon-sheen {
+  animation: neon-sheen-sweep 3.5s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   NEON GRADIENT & GLOW SYSTEM (RESPONSIVE TO LIGHT & DARK MODE)
+   ========================================================================== */
+@keyframes neon-gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes neon-glow-pulse-light {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px rgba(2, 132, 199, 0.45)) drop-shadow(0 0 16px rgba(99, 102, 241, 0.25));
+  }
+  50% {
+    filter: drop-shadow(0 0 14px rgba(6, 182, 212, 0.7)) drop-shadow(0 0 30px rgba(59, 130, 246, 0.45));
+  }
+}
+
+@keyframes neon-glow-pulse-dark {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.85)) drop-shadow(0 0 24px rgba(56, 189, 248, 0.65)) drop-shadow(0 0 45px rgba(168, 85, 247, 0.45));
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(6, 182, 212, 1)) drop-shadow(0 0 36px rgba(56, 189, 248, 0.9)) drop-shadow(0 0 70px rgba(168, 85, 247, 0.7));
+  }
+}
+
+@keyframes neon-border-pulse {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(6, 182, 212, 0.2), inset 0 0 12px rgba(6, 182, 212, 0.1);
+    border-color: rgba(6, 182, 212, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(6, 182, 212, 0.5), 0 0 50px rgba(168, 85, 247, 0.25), inset 0 0 20px rgba(6, 182, 212, 0.2);
+    border-color: rgba(6, 182, 212, 0.85);
+  }
+}
+
+.neon-title-gradient {
+  background: linear-gradient(135deg, #0284c7, #2563eb, #7c3aed, #06b6d4);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: neon-gradient-flow 8s ease infinite, neon-glow-pulse-light 3s ease-in-out infinite;
+}
+
+html.dark .neon-title-gradient {
+  background: linear-gradient(135deg, #00f0ff, #38bdf8, #818cf8, #c084fc, #34d399, #00f0ff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: neon-gradient-flow 6s ease infinite, neon-glow-pulse-dark 2.5s ease-in-out infinite;
+}
+
+.neon-card-glow {
+  animation: neon-border-pulse 4s ease-in-out infinite;
+}
+
+@keyframes neon-badge-blink {
+  0%, 100% {
+    opacity: 0.9;
+    box-shadow: 0 0 10px rgba(52, 211, 153, 0.4);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 22px rgba(52, 211, 153, 0.8);
+  }
+}
+
+.animate-neon-badge {
+  animation: neon-badge-blink 2.2s ease-in-out infinite;
+}
+
+@keyframes scannerBeam {
+  0% {
+    top: 5%;
+    opacity: 0.2;
+  }
+  50% {
+    top: 90%;
+    opacity: 1;
+  }
+  100% {
+    top: 5%;
+    opacity: 0.2;
+  }
+}
+

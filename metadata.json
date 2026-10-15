@@ -1,0 +1,10 @@
+{
+  "name": "COST SYSTEM",
+  "description": "Enterprise-grade system to manage materials, outsourced services, subcontractor rates, multi-phase project budgeting, inventory tracking, and real-time profitability analytics.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

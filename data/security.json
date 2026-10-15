@@ -1,0 +1,116 @@
+{
+  "adminSecretCode": "A9HF-4K28@",
+  "backupCodes": [
+    "BK-9476-5975",
+    "BK-4194-1850",
+    "BK-7102-6344",
+    "BK-4357-1844",
+    "BK-8168-3130",
+    "BK-4877-1281",
+    "BK-9848-6980",
+    "BK-2746-4370"
+  ],
+  "sessionTimeoutMinutes": 30,
+  "users": [
+    {
+      "id": "user-1792062214667",
+      "employeeId": "EMP-2026-99",
+      "name": "Alex Vance",
+      "email": "alex.vance@company.com",
+      "role": "PROJECT_MANAGER",
+      "department": "Engineering",
+      "passwordHash": "f54c350ac3a55b2ef262f67cb3a9fec8d5efaa9646995b7059f70ff9d4a31404390808518f7e7d1a9a279fa87e1454ab61a91178ae8d22e741748dbd222c97b7",
+      "passwordSalt": "a9dd7be1ca49705af08394ab6849e094",
+      "status": "Active",
+      "createdAt": "2026-10-15 11:03:34",
+      "authProvider": "password",
+      "twoFactorSecret": "GFHI5HHB6VCFMGBPDG4WBBFOPJD7QLYA",
+      "twoFactorEnabled": true,
+      "lastLogin": "2026-10-15 11:03:34"
+    },
+    {
+      "id": "user-admin-01",
+      "employeeId": "ADMIN-01",
+      "name": "Administrator",
+      "email": "nssl.graphics@gmail.com",
+      "role": "ADMIN",
+      "department": "Executive Management",
+      "passwordHash": "604c2a059d9f5abb3bbcaf2f99f6b8be5011feba8a3bb0a35fe06f96684d50a460a1a32ddf46e11d90f600d15e1a839142fac085ad87a241f9c3ebae55e95541",
+      "passwordSalt": "e066f7c6bdcab2c7d215600f1f943404",
+      "status": "Active",
+      "createdAt": "2026-10-14T19:04:11.594Z",
+      "twoFactorSecret": "UBE7AJJXD2TDPLWOU6XRSV5UZSRNP2OA",
+      "twoFactorEnabled": false,
+      "lastLogin": "2026-10-15 00:40:48",
+      "pendingTwoFactorSecret": "T46G3PISIG4DE7FACPFRHKJUZOW4CBYI"
+    }
+  ],
+  "sessions": {
+    "611a40b426dfcbdcc408ec3046f4115722c04e72fe99b70c3c446bf333539504": {
+      "userId": "user-admin-01",
+      "role": "ADMIN",
+      "lastActivity": 1792004697361,
+      "expiresAt": 1792006497361
+    },
+    "6c419b94f8a49dc5e11a4470b8a0fdd849e8f7e707d4bd24722040be11512e68": {
+      "userId": "user-admin-01",
+      "role": "ADMIN",
+      "lastActivity": 1792024842126,
+      "expiresAt": 1792026642126
+    },
+    "e341332024da230ee0ed889acca445095b7be2a6869ba6192097b8df31572b74": {
+      "userId": "user-admin-01",
+      "role": "ADMIN",
+      "lastActivity": 1792024848609,
+      "expiresAt": 1792026648609
+    },
+    "437487e3048e189ac1b584c6f7f866df7fc8ccdec15b9833e0c283697d338c5d": {
+      "userId": "user-1792062214667",
+      "role": "PROJECT_MANAGER",
+      "lastActivity": 1792062214667,
+      "expiresAt": 1792064014667
+    },
+    "01bfcb4460f189a8fe582940283f924660ce13f431d4c62493bf188cf226b61c": {
+      "userId": "user-1792062214667",
+      "role": "PROJECT_MANAGER",
+      "lastActivity": 1792062214683,
+      "expiresAt": 1792064014683
+    }
+  },
+  "tempMfaTokens": {
+    "532d58bfc1d19f725146d9539274ac52fa241fda5368ce2c": {
+      "userId": "user-admin-01",
+      "role": "ADMIN",
+      "createdAt": 1792004651596
+    },
+    "de23faa4f65726b9899260256cec9e014a2d7eb23e6290a8": {
+      "userId": "user-admin-01",
+      "role": "ADMIN",
+      "createdAt": 1792004686068
+    },
+    "a46e0452a2e00a145eaa1bd6c18956482a38ec1c474b63a5": {
+      "userId": "user-admin-01",
+      "role": "ADMIN",
+      "createdAt": 1792024826789
+    },
+    "8afa5d5ff24cede77c3dc66853f5033693bb869c038f9449": {
+      "userId": "user-1792062214667",
+      "role": "PROJECT_MANAGER",
+      "createdAt": 1792062214687
+    }
+  },
+  "pendingSignups": {
+    "0e82ddb63b48853d11f9f064e510ca92d91bdf6099b26bda": {
+      "employeeId": "EMP-2026-99",
+      "name": "Alex Vance",
+      "email": "alex.vance@company.com",
+      "role": "PROJECT_MANAGER",
+      "department": "Engineering",
+      "passwordHash": "2cc9d13a98d26327c471304c386b79a371b930395f33f9477a8a1f045129331381d61ff0aca92fb2c6c282701b5f6cee5cb18ddbbed855984d3de03d32af43a7",
+      "passwordSalt": "d529de53151ee6a1594fd3826fb24b76",
+      "authProvider": "password",
+      "twoFactorSecret": "XWZBVZJX7YOSPBHYC6JAXHQOZFHO6XT2",
+      "createdAt": 1792062190172
+    }
+  }
+}
